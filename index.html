@@ -1,0 +1,43 @@
+<html>
+  <head>
+    
+		<script type="text/javascript" src="frontend.js"></script>4
+    </head>
+  </ead>
+  <body>
+    <div>
+        <div>
+          Status: <span id='status'></span>
+        </div>
+        <div>
+          Server Time: <span id='servertime'></span>
+        </div>
+    </div>
+   
+    <script>
+      // var HOST = location.origin.replace(/^http/, 'ws')
+      // var ws = new WebSocket(HOST);
+      // var el = document.getElementById('servertime');
+      ws.onmessage = function (event) {
+        el.innerHTML = 'Server time: ' + event.data;
+      };
+    </script>
+  </body>
+</html>
+
+
+
+
+<!-- <html>
+  <body>
+    <p id='server-time'></p>
+    <script>
+      var HOST = location.origin.replace(/^http/, 'ws')
+      var ws = new WebSocket(HOST);
+      var el = document.getElementById('server-time');
+      ws.onmessage = function (event) {
+        el.innerHTML = 'Server time: ' + event.data;
+      };
+    </script>
+  </body>
+</html> -->
