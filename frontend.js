@@ -6,18 +6,15 @@ $(function () {
     // var timer = $('#timer');
     // var mybalance = $('#mybalance');
 
-    var HOST = location.origin.replace(/^http/, 'ws')
-    var ws = new WebSocket(HOST);
-
+    // var HOST = location.origin.replace(/^http/, 'ws');
+    // var ws = new WebSocket(HOST);
 
     var timer = $('#servertime');
     var status = $('#status');
 
+    var connection = new WebSocket('ws://127.0.0.1:1337');
 
-
-    // var connection = new WebSocket('ws://127.0.0.1:1337');
-
-    connection.onopen = function () {   
+    connection.onopen = function () {  
         status.text('Connected.');
     };
 
@@ -38,7 +35,7 @@ $(function () {
         }
         
 
-        timer.text(json.data);
+        // timer.text(json.data);
         
         // if (json.type === 'timer') { 
         //     timer.text(json.data);
