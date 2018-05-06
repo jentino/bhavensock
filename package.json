@@ -14,8 +14,8 @@
   "license": "ISC",
   "dependencies": {
     "bufferutil": "1.2.1",
-    "express": "4.13.4",
+    "express": "latest",
     "utf-8-validate": "1.2.1",
-    "ws": "1.1.0"
+    "ws": "latest"
   }
 }
