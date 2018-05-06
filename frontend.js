@@ -13,7 +13,7 @@ $(function () {
     var ws = new WebSocket(HOST);
     var el = document.getElementById('server-time');
     ws.onmessage = function (event) {
-    el.innerHTML = 'Server time: ' + event.data;
+        el.innerHTML = 'Server time: ' + event.data;
     };
 
     // var timer = $('#servertime');
