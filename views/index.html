@@ -12,31 +12,19 @@
     <title>Main</title>
   </head>
   <body>
-      <div>
-          <nav class="navbar navbar-inverse" role="navigation" style="padding-left:130px;">
-            <ul class="nav navbar-nav">
-              <li ><a href="/">Home<span class="sr-only">(current)</span></a></li>
-              <li><a href="/about">About us</a></li>
-              <li class="active"><a href="/contact">Contact us</a></li>
-            </ul>
-          </nav>
-        </div>
 
-        <div class="jumbotron"> 
-          <p>
-            <p id='server-time'></p>
-            <script>
-              var HOST = location.origin.replace(/^http/, 'ws')
-              var ws = new WebSocket(HOST);
-              var el = document.getElementById('server-time');
-              ws.onmessage = function (event) {
-                el.innerHTML = 'Server time: ' + event.data;
-              };
-            </script>
-          </p>
-        </div>
-
-        
+    <div class="container-fluid jumbotron"> 
+      <p id='server-time'></p>
+    </div>
+    
+    <script>
+      var HOST = location.origin.replace(/^http/, 'ws')
+      var ws = new WebSocket(HOST);
+      var el = document.getElementById('server-time');
+      ws.onmessage = function (event) {
+        el.innerHTML = 'Server time: ' + event.data;
+      };
+    </script>
 
   </body>
 </html>
