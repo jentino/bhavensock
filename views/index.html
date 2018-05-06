@@ -45,7 +45,15 @@
     <div class="container-fluid jumbotron"> 
       <p id='server-time'></p>
     </div>
-    
-    <script type="text/javascript" src="../frontend.js"></script>
+
+    <script type="text/javascript">
+      var HOST = location.origin.replace(/^http/, 'ws');
+      var ws = new WebSocket(HOST);
+      var el = document.getElementById('server-time');
+      ws.onmessage = function (event) {
+          el.innerHTML = 'Current time: ' + event.data;
+      };
+    </script>
+
   </body>
 </html>

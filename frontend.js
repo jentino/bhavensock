@@ -8,6 +8,8 @@ $(function () {
 
     // var HOST = location.origin.replace(/^http/, 'ws');
     // var ws = new WebSocket(HOST);
+
+    alert("Asdfasdf asdfasdf");
     
     var HOST = location.origin.replace(/^http/, 'ws');
     var ws = new WebSocket(HOST);
